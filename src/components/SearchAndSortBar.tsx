@@ -1,4 +1,6 @@
 
+
+import Button from './Button';
 import type { User } from '../types/User';
 
 interface SearchAndSortBarProps {
@@ -35,19 +37,18 @@ export const SearchAndSortBar: React.FC<SearchAndSortBarProps> = ({
       />
       <div className="flex gap-4">
         {(['name', 'email'] as Array<keyof User>).map((field) => (
-          <button
+          <Button
             key={field}
-            type="button"
             onClick={() => handleSortClick(field)}
-            className={`px-3 py-2 border rounded ${
+            className={
               sortBy === field
                 ? 'bg-blue-500 text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-200'
-            }`}
+            }
             aria-pressed={sortBy === field}
           >
             Sort by {field} {sortBy === field ? (sortOrder === 'asc' ? '▲' : '▼') : ''}
-          </button>
+          </Button>
         ))}
       </div>
     </div>

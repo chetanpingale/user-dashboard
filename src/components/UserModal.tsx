@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Button from './Button';
 import type { User } from '../types/User';
 
 interface UserModalProps {
@@ -88,14 +89,14 @@ export const UserModal: React.FC<UserModalProps> = ({ user, isOpen, onClose }) =
           <strong>Company:</strong> {user.company.name}
         </p>
         </div>
-        <button
+        <Button
           onClick={onClose}
-          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="mt-4 bg-blue-600 text-white hover:bg-blue-700"
           aria-label="Close user details dialog"
           autoFocus
         >
           Close
-        </button>
+        </Button>
       </div>
     </div>
   );

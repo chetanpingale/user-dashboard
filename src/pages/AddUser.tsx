@@ -1,6 +1,7 @@
 
 // AddUser page: form to add a new user to the dashboard
 import React, { useContext, useState } from 'react';
+import Button from '../components/Button';
 import { UserContext } from '../context/UserContext';
 import type { User } from '../types/User';
 import { isEmail } from '../utils/validators';
@@ -223,14 +224,14 @@ const AddUser: React.FC = () => {
         </div>
 
         {/* Submit button */}
-        <button
+        <Button
           type="submit"
           disabled={submitting}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
           aria-busy={submitting}
         >
           {submitting ? 'Adding...' : 'Add User'}
-        </button>
+        </Button>
       </form>
     </div>
   );
