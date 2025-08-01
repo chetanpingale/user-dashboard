@@ -14,6 +14,8 @@ export const AppRoutes: React.FC = () => (
       <Route path="/" element={<UserList />} />
       {/* Add user route */}
       <Route path="/add" element={<AddUser />} />
+      {/* Catch-all: redirect unknown routes to UserList */}
+      <Route path="*" element={<UserList />} />
     </Routes>
   </Suspense>
 );
