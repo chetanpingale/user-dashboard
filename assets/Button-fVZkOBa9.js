@@ -1,0 +1,1 @@
+import{j as n}from"./index-BeQ7HviX.js";const u=({children:t,className:o="",type:r="button",...s})=>n.jsx("button",{type:r,className:`px-3 py-2 border rounded cursor-pointer ${o}`,...s,children:t});export{u as B};
