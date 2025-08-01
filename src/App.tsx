@@ -5,7 +5,7 @@
  * Wraps the app within UserContext provider and sets up the basic layout.
  * Includes the navigation/header and renders the main application routes.
  */
-import React from 'react';
+
 import { UserProvider } from './context/UserContext';
 import { AppRoutes } from './routes/AppRoutes';
 import './index.css'; // Importing Tailwind CSS styles
